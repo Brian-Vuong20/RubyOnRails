@@ -1,0 +1,36 @@
+<div class="container ">
+<div class="blog_title">
+    <h1>Admin</h1>
+</div>
+
+<div class="news_admin d-flex flex-row ">
+
+    <div class="col-sm-6">
+    <%for i in 1..4 do%>
+        <div class="d-flex justify-content-start mb-5  flex-column">
+            <div class="title">
+                <a href="#" class="text-decoration-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                <div class="news_function"><%= link_to "Edit"%> |<%= link_to 'Delete', @news, data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %>| <%= link_to "Hide"%></div>
+            </div>
+            <div class="body">
+               <p>orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into <a href="" class="text-decoration-none">Read more</a> </p>
+            </div>
+        </div>
+    <%end%>   
+    </div>
+    <div class="col-sm-4 ms-5 d-flex flex-column">
+       
+            <%=link_to "Create News", new_news_path, class: 'btn btn-primary stretched-link mb-3'%>
+       
+            <%=link_to "Create News Category",new_news_path, class: 'btn btn-primary stretched-link mb-3'%>
+      
+        
+            <%=link_to "Edit News Category",new_news_path, class: 'btn btn-primary stretched-link mb-3'%>
+    
+        
+            <%=link_to "Delete News Category",new_news_path, class: 'btn btn-primary stretched-link mb-3'%>
+      
+
+    </div>
+    </div>
+</div>
