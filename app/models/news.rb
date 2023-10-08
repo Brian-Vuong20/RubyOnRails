@@ -1,4 +1,4 @@
 class News < ApplicationRecord
     belongs_to :user
-    has_many :category
+    belongs_to :category
 end

@@ -1,10 +1,12 @@
 <div class="container">
-    <div class="news_container mt-5">
+    <div class="new_container mt-5">
         <div class="news_info_container mb-5">
-            <h2 style="color: #0ACDF8">Lorem Ipsum is simply dummy text of the printing and typesetting industry</h2>
+            <h2 style="color: #0ACDF8"><%= @news_item.news_title%></h2>
             <div class="mt-3">
                 <h4 class="d-inline" style="color: #0ACDF8">Category:</h4>
-                <h5 class="d-inline m-3">Science</h5>
+                   
+                <h5 class="d-inline m-3"><%= @category_name%></h5>
+             
             </div>
             <div class="mt-3">
                 <h4 class="d-inline" style="color: #0ACDF8">Source:</h4>
@@ -12,17 +14,13 @@
             </div>
             <div class="mt-3">
                 <h4 class="d-inline" style="color: #0ACDF8">Date:</h4>
-                <h5 class="d-inline m-3">6-august-2023</h5>
+                <h5 class="d-inline m-3"><%= @time%></h5>
             </div>
         </div>
         <div class="news_body">
-            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into</p>
+            <p>
+                <%= @news_item.news_body%>
+            </p>
         </div>
         <div class="comment_container mt-5">
             <h5>Comments</h5>

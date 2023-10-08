@@ -8,13 +8,13 @@
 <div class="container">
 
     <div class="d-flex justify-content-start flex-column">
-    <%for i in 1..4 do%>
+    <%@recent_news.each do |news|%>
         <div class="d-flex justify-content-start mb-5 mt-5 flex-column">
             <div class="title">
-                <a href="#" class="text-decoration-none">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</a>
+                <%= link_to news.news_title, news_path(news.id)%>
             </div>
             <div class="body">
-               <p>orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into <a href="" class="text-decoration-none">Read more</a> </p>
+               <p><%= news.news_body%></p> <%= link_to "Read more", news_path(news.id)%>
             </div>
         </div>
     <%end%>

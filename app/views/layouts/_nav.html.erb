@@ -17,14 +17,17 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <%= current_user.email%>
           </a>
-         
+        
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+           <% if current_user.admin%>
             <li><a class="dropdown-item" href="/news/news_management">News Management</a></li>
+            <%end%>
+            
             <li><%= button_to "Sign out", destroy_user_session_path, method: :delete ,class: "dropdown-item" %></li>
           </ul>
           <%else %>
            <li class="nav-item">
-            <%=link_to "Sign up", new_user_session_path, class: "nav-link"%>
+            <%=link_to "Sign in", new_user_session_path, class: "nav-link"%>
            </li>
            <li class="nav-item">
             <%=link_to "Sign up", new_user_registration_path, class: "nav-link"%>
