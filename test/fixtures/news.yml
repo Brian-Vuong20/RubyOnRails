@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  news_title: MyString
+  news_body: MyText
+  news_date: MyString
+  news_category: MyString
+
+two:
+  news_title: MyString
+  news_body: MyText
+  news_date: MyString
+  news_category: MyString

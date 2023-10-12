@@ -1,0 +1,23 @@
+
+<!----The Body of the blog-->
+<div class="container">
+
+<div class="blog_title">
+    <h1>Recent news</h1>
+</div>
+<div class="container">
+
+    <div class="d-flex justify-content-start flex-column">
+    <%@recent_news.each do |news|%>
+        <div class="d-flex justify-content-start mb-5 mt-5 flex-column">
+            <div class="title">
+                <%= link_to news.news_title, news_path(news.id)%>
+            </div>
+            <div class="body">
+               <p><%= news.news_body%></p> <%= link_to "Read more", news_path(news.id)%>
+            </div>
+        </div>
+    <%end%>
+   
+</div>
+</div>
